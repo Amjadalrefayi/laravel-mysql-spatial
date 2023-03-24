@@ -9,7 +9,7 @@ class SpatialExpression extends Expression
     #[\ReturnTypeWillChange]
     public function getValue($grammar)
     {
-        return "ST_GeomFromText(?)";
+        return 'ST_GeomFromText(?)';
     }
 
     public function getSpatialValue()
@@ -17,8 +17,4 @@ class SpatialExpression extends Expression
         return $this->value->toWkt();
     }
 
-    public function getSrid()
-    {
-        return $this->value->getSrid();
-    }
 }
